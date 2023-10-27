@@ -18,6 +18,13 @@ function App() {
     if( counter <20){
       counter = counter+1
       setCounter(counter)
+      // setCounter(counter+1)
+      // setCounter(counter+1)
+      // setCounter(counter+1)
+      // setCounter(counter+1)
+      // Below way can update counter multiple time in a click
+      // setCounter(counter+1)
+      // setCounter(prevCounter => prevCounter+1)
       console.log(`clicked ${counter}`);
     }else{
       alert("You can Add upto 20")
