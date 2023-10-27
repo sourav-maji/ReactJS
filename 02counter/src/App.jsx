@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
 
-  let [counter, setCounter] = useState(15)
+  let [counter, setCounter] = useState(10)
 
   // let counter =5
   const addValue = ()=>{
@@ -15,15 +15,25 @@ function App() {
     // console.log(counter);
 
     // react
-    counter = counter+1
-    setCounter(counter)
-    console.log(`clicked ${counter}`);
+    if( counter <20){
+      counter = counter+1
+      setCounter(counter)
+      console.log(`clicked ${counter}`);
+    }else{
+      alert("You can Add upto 20")
+    }
+   
 
   }
 
   const removeValue = ()=>{
-    counter = counter -1
-    setCounter(counter)
+    if(counter >= 1 ){
+      counter = counter -1
+      setCounter(counter)
+    }else{
+      alert("You can't Remove below 0")
+    }
+    
 
   }
 
